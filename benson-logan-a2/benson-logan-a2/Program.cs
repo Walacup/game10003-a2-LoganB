@@ -24,8 +24,9 @@ public class Program
             // Enable drawing to the canvas (window)
             Raylib.BeginDrawing();
             // Clear the canvas with one color
-            Raylib.ClearBackground(Color.RayWhite);
+            Raylib.ClearBackground(Raylib_cs.Color.RayWhite);
             // Your game code here. This is a function YOU define.
+            Raylib.DrawText("2D INTERACTIVE TOY", 12, 12, 20, Raylib_cs.Color.Black);
             Update();
             // Stop drawing to the canvas, begin displaying the frame
             Raylib.EndDrawing();
