@@ -26,7 +26,9 @@ public class Program
             // Clear the canvas with one color
             Raylib.ClearBackground(Raylib_cs.Color.RayWhite);
             // Your game code here. This is a function YOU define.
-            Raylib.DrawText("2D INTERACTIVE TOY", 12, 12, 20, Raylib_cs.Color.Black);
+            Raylib.DrawText("Press up arrow key or down arrow key", 12, 12, 20, Raylib_cs.Color.Black);
+            Raylib.DrawRectangle(200, 200, 300, 300, Raylib_cs.Color.Blue);
+            Raylib.DrawRectangle(280, 70, 140, 140, Raylib_cs.Color.Blue);
             Update();
             // Stop drawing to the canvas, begin displaying the frame
             Raylib.EndDrawing();
