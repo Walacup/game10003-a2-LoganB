@@ -10,6 +10,7 @@ public class Program
     static int screenHeight = 600; // Screen height
     static int targetFps = 60; // Target frames-per-second
     static bool upArrowPressed = false;
+    static bool gKeyPressed = false;
 
     static void Main()
     {
@@ -29,7 +30,8 @@ public class Program
             // Your game code here. This is a function YOU define.
 
             // Adding instructions
-            Raylib.DrawText("Press up arrow key or down arrow key", 12, 12, 20, Raylib_cs.Color.Black);
+            Raylib.DrawText("Press up arrow key", 12, 12, 20, Raylib_cs.Color.Black);
+            Raylib.DrawText("Press G key", 12, 50, 20, Raylib_cs.Color.Black);
 
             // Draw the robot
             DrawRobot();
@@ -43,6 +45,9 @@ public class Program
 
             if (upArrowPressed)
                 Raylib.DrawRectangle(200, 300, 300, 200, Raylib_cs.Color.Red);
+
+            if (gKeyPressed)
+                Raylib.DrawRectangle(250, 300, 200, 150, Raylib_cs.Color.Green);
 
             // Stop drawing to the canvas, begin displaying the frame
             Raylib.EndDrawing();
@@ -63,6 +68,11 @@ public class Program
         {
             upArrowPressed = true;
         }
+
+        if (Raylib.IsKeyPressed(KeyboardKey.G))
+        {
+            gKeyPressed = true;
+        }
     }
 
     static void DrawRobot()
@@ -81,8 +91,8 @@ public class Program
         // Draw buttons
         for (int i = 0; i < 2; i++)
         {
-            int x = 300 + i * 100; // Adjust the x position
-            int y = 250;         // Fixed y position
+            int x = 300 + i * 100;
+            int y = 250;
             Raylib.DrawCircle(x, y, 20, Raylib_cs.Color.Gold);
         }
     }
