@@ -35,6 +35,8 @@ public class Program
             Raylib.DrawRectangle(280, 70, 140, 140, Raylib_cs.Color.Blue);
             Raylib.DrawRectangle(200, 400, 80, 170, Raylib_cs.Color.Blue);
             Raylib.DrawRectangle(420, 400, 80, 170, Raylib_cs.Color.Blue);
+            Raylib.DrawRectangle(400, 200, 210, 80, Raylib_cs.Color.Blue);
+            Raylib.DrawRectangle(90, 200, 210, 80, Raylib_cs.Color.Blue);
 
             Update();
             // Stop drawing to the canvas, begin displaying the frame
