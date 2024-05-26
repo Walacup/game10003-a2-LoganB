@@ -34,7 +34,12 @@ public class Program
             // Draw the robot
             DrawRobot();
 
+            // Draw multiple circles
+            DrawButtons();
+
             Update();
+
+            //Draw shirt
 
             if (upArrowPressed)
                 Raylib.DrawRectangle(200, 300, 300, 200, Raylib_cs.Color.Red);
@@ -70,4 +75,16 @@ public class Program
         Raylib.DrawRectangle(400, 200, 210, 80, Raylib_cs.Color.Blue);
         Raylib.DrawRectangle(90, 200, 210, 80, Raylib_cs.Color.Blue);
     }
+
+    static void DrawButtons()
+    {
+        // Draw buttons
+        for (int i = 0; i < 2; i++)
+        {
+            int x = 300 + i * 100; // Adjust the x position
+            int y = 250;         // Fixed y position
+            Raylib.DrawCircle(x, y, 20, Raylib_cs.Color.Gold);
+        }
+    }
 }
+
