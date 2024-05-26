@@ -9,6 +9,7 @@ public class Program
     static int screenWidth = 800; // Screen width
     static int screenHeight = 600; // Screen height
     static int targetFps = 60; // Target frames-per-second
+    static bool upArrowPressed = false;
 
     static void Main()
     {
@@ -38,7 +39,12 @@ public class Program
             Raylib.DrawRectangle(400, 200, 210, 80, Raylib_cs.Color.Blue);
             Raylib.DrawRectangle(90, 200, 210, 80, Raylib_cs.Color.Blue);
 
+          
             Update();
+
+            if (upArrowPressed)
+                Raylib.DrawRectangle(200, 300, 300, 200, Raylib_cs.Color.Red);
+
             // Stop drawing to the canvas, begin displaying the frame
             Raylib.EndDrawing();
         }
@@ -54,5 +60,9 @@ public class Program
     static void Update()
     {
         // Your game code run each frame here
+        if (Raylib.IsKeyPressed(KeyboardKey.Up))
+        {
+            upArrowPressed = true;
+        }
     }
 }
