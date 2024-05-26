@@ -33,7 +33,7 @@ public class Program
             Raylib.DrawText("Press up arrow key", 12, 12, 20, Raylib_cs.Color.Black);
             Raylib.DrawText("Press G key", 12, 50, 20, Raylib_cs.Color.Black);
 
-            // Draw the robot
+            // Draw the robot 
             DrawRobot();
 
             // Draw multiple circles
