@@ -27,19 +27,13 @@ public class Program
             // Clear the canvas with one color
             Raylib.ClearBackground(Raylib_cs.Color.RayWhite);
             // Your game code here. This is a function YOU define.
-            
-            //Adding instructictions
+
+            // Adding instructions
             Raylib.DrawText("Press up arrow key or down arrow key", 12, 12, 20, Raylib_cs.Color.Black);
 
-            //Robot
-            Raylib.DrawRectangle(200, 200, 300, 300, Raylib_cs.Color.Blue);
-            Raylib.DrawRectangle(280, 70, 140, 140, Raylib_cs.Color.Blue);
-            Raylib.DrawRectangle(200, 400, 80, 170, Raylib_cs.Color.Blue);
-            Raylib.DrawRectangle(420, 400, 80, 170, Raylib_cs.Color.Blue);
-            Raylib.DrawRectangle(400, 200, 210, 80, Raylib_cs.Color.Blue);
-            Raylib.DrawRectangle(90, 200, 210, 80, Raylib_cs.Color.Blue);
+            // Draw the robot
+            DrawRobot();
 
-          
             Update();
 
             if (upArrowPressed)
@@ -64,5 +58,16 @@ public class Program
         {
             upArrowPressed = true;
         }
+    }
+
+    static void DrawRobot()
+    {
+        // Robot
+        Raylib.DrawRectangle(200, 200, 300, 300, Raylib_cs.Color.Blue);
+        Raylib.DrawRectangle(280, 70, 140, 140, Raylib_cs.Color.Blue);
+        Raylib.DrawRectangle(200, 400, 80, 170, Raylib_cs.Color.Blue);
+        Raylib.DrawRectangle(420, 400, 80, 170, Raylib_cs.Color.Blue);
+        Raylib.DrawRectangle(400, 200, 210, 80, Raylib_cs.Color.Blue);
+        Raylib.DrawRectangle(90, 200, 210, 80, Raylib_cs.Color.Blue);
     }
 }
